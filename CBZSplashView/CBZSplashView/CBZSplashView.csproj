@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="..\packages\NuGet.Build.Packaging.0.1.276\build\NuGet.Build.Packaging.props" Condition="Exists('..\packages\NuGet.Build.Packaging.0.1.276\build\NuGet.Build.Packaging.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -9,6 +10,22 @@
     <RootNamespace>CBZSplashView</RootNamespace>
     <AssemblyName>CBZSplashView</AssemblyName>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <PackageId>ExpandingSplashView</PackageId>
+    <PackageVersion>2017.10.18</PackageVersion>
+    <Authors>SuavePirate</Authors>
+    <PackageLicenseUrl>https://github.com/SuavePirate/ExpandingSplashView/blob/master/LICENSE</PackageLicenseUrl>
+    <Owners>SuavePirate</Owners>
+    <PackageProjectUrl>https://github.com/SuavePirate/ExpandingSplashView</PackageProjectUrl>
+    <PackageReleaseNotes>Initial release</PackageReleaseNotes>
+    <Summary>Create a splash view not dissimilar to the one Twitter use.
+
+</Summary>
+    <PackageTags>Xamarin.iOS Xamarin CBZSplashView Splash Screen</PackageTags>
+    <Title>Expanding Splash View</Title>
+    <Description>A Xamarin.iOS implementation of the CBZSplashView from @callumboddy. Add to the layers of any view and animate the expansion of either a rasterized png or a vector simlar to Twitter's old splash screen.</Description>
+    <PackageIconUrl>https://raw.githubusercontent.com/SuavePirate/ExpandingSplashView/master/CBZLogo.png</PackageIconUrl>
+ 
+    <PackOnBuild>true</PackOnBuild>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -46,5 +63,10 @@
   <ItemGroup>
     <ObjcBindingNativeLibrary Include="CBZSplashView.a" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.ObjCBinding.CSharp.targets" />
+    <Import Project="..\packages\NuGet.Build.Packaging.0.1.276\build\NuGet.Build.Packaging.targets" Condition="Exists('..\packages\NuGet.Build.Packaging.0.1.276\build\NuGet.Build.Packaging.targets')" />
+
 </Project>
