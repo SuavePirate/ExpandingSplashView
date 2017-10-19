@@ -3,6 +3,8 @@ A Xamarin.iOS implementation of the popular iOS control CBZSplashView from @call
 
 Credit where credit is due (I just spent a couple hours fighting with the binding libraries, but @callumboddy did the real work): https://github.com/callumboddy/CBZSplashView
 
+<img src="CBZLogo.png" width="100"/>
+
 ## Installation
 
 You can either clone the repository and reference the `CBZSplashView` project, or you can **now** use NuGet!
@@ -71,3 +73,5 @@ namespace Example
     }
 }
 ```
+
+<img src="twitter-gif.gif"/>
